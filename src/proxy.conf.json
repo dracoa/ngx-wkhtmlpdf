@@ -1,0 +1,26 @@
+{
+  "/auth-api": {
+    "target": "https://faas.cityu-sro.hk/function/sso-auth-master",
+    "secure": true,
+    "pathRewrite": {
+      "^/auth-api": ""
+    },
+    "changeOrigin": true,
+    "logLevel": "error"
+  },
+  "/v1/graphql": {
+    "target": "https://hasura-console.cityu-sro.hk:9443",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "error"
+  },
+  "/wkhtmltopdf": {
+    "target": "http://144.214.93.106:18237/",
+    "secure": false,
+    "pathRewrite": {
+      "^/wkhtmltopdf": ""
+    },
+    "changeOrigin": true,
+    "logLevel": "error"
+  }
+}
